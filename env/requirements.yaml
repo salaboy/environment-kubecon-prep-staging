@@ -7,6 +7,9 @@ dependencies:
   name: exposecontroller
   repository: http://chartmuseum.jenkins-x.io
   version: 2.3.118
+- name: fmtok8s-api-gateway
+  repository: http://jenkins-x-chartmuseum:8080
+  version: 0.0.2
 - name: fmtok8s-monolith
   repository: http://jenkins-x-chartmuseum:8080
   version: 0.0.1
