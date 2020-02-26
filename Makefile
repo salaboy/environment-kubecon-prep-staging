@@ -14,7 +14,7 @@ build: clean
 
 install: 
 	helm upgrade ${NAMESPACE} ${DIR} --install --namespace ${NAMESPACE} --debug
-
+	helm test ${NAMESPACE}
 delete:
 	helm delete --purge ${NAMESPACE}  --namespace ${NAMESPACE}
 
