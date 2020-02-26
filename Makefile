@@ -13,8 +13,10 @@ build: clean
 	helm lint ${DIR}
 
 install: 
+	echo "upgrading/installing chart ..." 
 	helm upgrade ${NAMESPACE} ${DIR} --install --namespace ${NAMESPACE} --debug
-	helm test ${NAMESPACE}
+	echo "testing chart ..." 
+	helm test ${NAMESPACE} --namespace ${NAMESPACE} --debug
 delete:
 	helm delete --purge ${NAMESPACE}  --namespace ${NAMESPACE}
 
