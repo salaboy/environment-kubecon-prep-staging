@@ -5,4 +5,8 @@ pipelineConfig:
   env:
   - name: DEPLOY_NAMESPACE
     value: jx-staging
-  pipelines: {}
+  pipelines:
+    release:
+      promote:
+        steps:
+        - command: 'helm test jx-staging'
