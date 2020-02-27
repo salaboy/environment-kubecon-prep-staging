@@ -16,6 +16,9 @@ dependencies:
 - name: fmtok8s-c4p
   repository: http://jenkins-x-chartmuseum:8080
   version: 0.0.9
+- name: fmtok8s-email
+  repository: http://jenkins-x-chartmuseum:8080
+  version: 0.0.1
 - name: fmtok8s-monolith
   repository: http://jenkins-x-chartmuseum:8080
   version: 0.0.1
