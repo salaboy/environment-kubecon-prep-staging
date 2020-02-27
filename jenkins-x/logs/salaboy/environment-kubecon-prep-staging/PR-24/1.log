@@ -1,0 +1,40 @@
+
+Showing logs for build [32msalaboy-environment-kubecon-pre-bgbrk-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-4k7nd[0m
+{"level":"warn","ts":1582805031.1322944,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1582805031.1330142,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32msalaboy-environment-kubecon-pre-bgbrk-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-p2npz[0m
+{"level":"warn","ts":1582805032.977129,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1582805032.978513,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32msalaboy-environment-kubecon-pre-bgbrk-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32msalaboy-environment-kubecon-pre-bgbrk-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-salaboy-environment-kubecon-pre-bgbrk-xqrmr[0m
+{"level":"warn","ts":1582805133.155059,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1582805134.2907584,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/*******/environment-kubecon-prep-staging.git @ master in path /workspace/source"}
+
+Showing logs for build [32msalaboy-environment-kubecon-pre-bgbrk-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:fb32f209aa0fa3d5ef31b841e704e7b3a06b4633,24:b323239ad653ddc5f923982a7ab9fa00953ff3d4
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git fetch origin --unshallow b323239ad653ddc5f923982a7ab9fa00953ff3d4: fb32f209aa0fa3d5ef31b841e704e7b3a06b4633:
+DEBUG: ran git fetch --unshallow origin b323239ad653ddc5f923982a7ab9fa00953ff3d4: fb32f209aa0fa3d5ef31b841e704e7b3a06b4633: in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git branch
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git checkout master
+DEBUG: ran git checkout master in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git reset --hard fb32f209aa0fa3d5ef31b841e704e7b3a06b4633
+DEBUG: ran git reset --hard fb32f209aa0fa3d5ef31b841e704e7b3a06b4633 in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git clean -fd .
+DEBUG: ran clean --force -d . in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git merge b323239ad653ddc5f923982a7ab9fa00953ff3d4
+DEBUG: ran git merge b323239ad653ddc5f923982a7ab9fa00953ff3d4 in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git log --format=%H%x1f%an%x1f%ae%x1f%cn%x1f%ce%x1f%s%n%b%x1e fb32f209aa0fa3d5ef31b841e704e7b3a06b4633..HEAD
+Merged SHA b323239ad653ddc5f923982a7ab9fa00953ff3d4 with commit message 'chore: Promote fmtok8s-api-gateway to version 0.0.11' into base branch master
+
+Showing logs for build [32msalaboy-environment-kubecon-pre-bgbrk-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-helm-build[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io
+Successfully added Helm repository chartmuseum.jenkins-x.io.
