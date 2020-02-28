@@ -1,0 +1,36 @@
+
+Showing logs for build [32msalaboy-environment-kubecon-pre-n6ww2-40[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-qqvbb[0m
+{"level":"warn","ts":1582887896.8505466,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1582887896.8516629,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32msalaboy-environment-kubecon-pre-n6ww2-40[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-rcmj2[0m
+{"level":"warn","ts":1582887897.294895,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1582887897.2972322,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32msalaboy-environment-kubecon-pre-n6ww2-40[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32msalaboy-environment-kubecon-pre-n6ww2-40[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-salaboy-environment-kubecon-pre-n6ww2-pq48z[0m
+{"level":"warn","ts":1582887903.4558754,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1582887904.643254,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/*******/environment-kubecon-prep-staging.git @ v0.0.40 in path /workspace/source"}
+
+Showing logs for build [32msalaboy-environment-kubecon-pre-n6ww2-40[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:c8616465d99c2ec2c5ad6869abb54d357bddd112
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32msalaboy-environment-kubecon-pre-n6ww2-40[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /builder/home/git/credentials
+
+Showing logs for build [32msalaboy-environment-kubecon-pre-n6ww2-40[0m stage [32mfrom-build-pack[0m and container [32mstep-build-helm-apply[0m
+Modified file /workspace/source/env/Chart.yaml to set the chart to version 40
+Ignoring templates/.gitignore
+Ignoring templates/wildcardcert-secret.yaml
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io
+Successfully added Helm repository chartmuseum.jenkins-x.io.
+
+release.jenkins.io "fmtok8s-api-gateway-0.0.15" deleted
