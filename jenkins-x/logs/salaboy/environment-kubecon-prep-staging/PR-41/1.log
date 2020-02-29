@@ -1,0 +1,40 @@
+
+Showing logs for build [32msalaboy-environment-kubecon-pre-9jvlb-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-mlxdc[0m
+{"level":"warn","ts":1582971392.663237,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1582971392.6642332,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32msalaboy-environment-kubecon-pre-9jvlb-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-rhcqc[0m
+{"level":"warn","ts":1582971394.0308475,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1582971394.0322976,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32msalaboy-environment-kubecon-pre-9jvlb-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32msalaboy-environment-kubecon-pre-9jvlb-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-salaboy-environment-kubecon-pre-9jvlb-tlpj7[0m
+{"level":"warn","ts":1582971398.1459672,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1582971399.3307283,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/*******/environment-kubecon-prep-staging.git @ master in path /workspace/source"}
+
+Showing logs for build [32msalaboy-environment-kubecon-pre-9jvlb-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:d1b75f9feb4a772173ea5d073ea2a46ab9a25e52,41:c654fbfb4ba559123f79903c96ae96e159090fc2
+DEBUG: JX_LOG_LEVEL=error LC_ALL=C git fetch origin --unshallow c654fbfb4ba559123f79903c96ae96e159090fc2: d1b75f9feb4a772173ea5d073ea2a46ab9a25e52:
+DEBUG: ran git fetch --unshallow origin c654fbfb4ba559123f79903c96ae96e159090fc2: d1b75f9feb4a772173ea5d073ea2a46ab9a25e52: in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git branch
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git checkout master
+DEBUG: ran git checkout master in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git reset --hard d1b75f9feb4a772173ea5d073ea2a46ab9a25e52
+DEBUG: ran git reset --hard d1b75f9feb4a772173ea5d073ea2a46ab9a25e52 in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git clean -fd .
+DEBUG: ran clean --force -d . in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git merge c654fbfb4ba559123f79903c96ae96e159090fc2
+DEBUG: ran git merge c654fbfb4ba559123f79903c96ae96e159090fc2 in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git log --format=%H%x1f%an%x1f%ae%x1f%cn%x1f%ce%x1f%s%n%b%x1e d1b75f9feb4a772173ea5d073ea2a46ab9a25e52..HEAD
+Merged SHA c654fbfb4ba559123f79903c96ae96e159090fc2 with commit message 'chore: Promote fmtok8s-api-gateway to version 0.0.23' into base branch master
+
+Showing logs for build [32msalaboy-environment-kubecon-pre-9jvlb-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-helm-build[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io
+Successfully added Helm repository chartmuseum.jenkins-x.io.
