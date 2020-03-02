@@ -1,0 +1,43 @@
+
+Showing logs for build [32msalaboy-environment-kubecon-pre-82fnt-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-2x7xr[0m
+{"level":"warn","ts":1583158547.0793598,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1583158547.0797918,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32msalaboy-environment-kubecon-pre-82fnt-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-vfwwv[0m
+{"level":"warn","ts":1583158548.5279782,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1583158548.5295088,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32msalaboy-environment-kubecon-pre-82fnt-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32msalaboy-environment-kubecon-pre-82fnt-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-salaboy-environment-kubecon-pre-82fnt-7nwdq[0m
+{"level":"warn","ts":1583158552.646983,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1583158553.7775993,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/*******/environment-kubecon-prep-staging.git @ master in path /workspace/source"}
+
+Showing logs for build [32msalaboy-environment-kubecon-pre-82fnt-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:04b0f71356311da7fb72319bba2f1e224a5c246b,56:b7ab95ab168a60e5f6e9051d347ba5c369c8168e
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git fetch origin --unshallow b7ab95ab168a60e5f6e9051d347ba5c369c8168e: 04b0f71356311da7fb72319bba2f1e224a5c246b:
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git fetch origin b7ab95ab168a60e5f6e9051d347ba5c369c8168e: 04b0f71356311da7fb72319bba2f1e224a5c246b:
+DEBUG: ran git fetch origin b7ab95ab168a60e5f6e9051d347ba5c369c8168e: 04b0f71356311da7fb72319bba2f1e224a5c246b: in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git rev-parse --is-shallow-repository
+DEBUG: Unshallowed git repo in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git branch
+DEBUG: JX_LOG_LEVEL=error LC_ALL=C git checkout master
+DEBUG: ran git checkout master in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git reset --hard 04b0f71356311da7fb72319bba2f1e224a5c246b
+DEBUG: ran git reset --hard 04b0f71356311da7fb72319bba2f1e224a5c246b in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git clean -fd .
+DEBUG: ran clean --force -d . in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git merge b7ab95ab168a60e5f6e9051d347ba5c369c8168e
+DEBUG: ran git merge b7ab95ab168a60e5f6e9051d347ba5c369c8168e in 
+DEBUG: JX_LOG_LEVEL=error LC_ALL=C git log --format=%H%x1f%an%x1f%ae%x1f%cn%x1f%ce%x1f%s%n%b%x1e 04b0f71356311da7fb72319bba2f1e224a5c246b..HEAD
+Merged SHA b7ab95ab168a60e5f6e9051d347ba5c369c8168e with commit message 'chore: Promote fmtok8s-api-gateway to version 0.0.29' into base branch master
+
+Showing logs for build [32msalaboy-environment-kubecon-pre-82fnt-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-helm-build[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io
+Successfully added Helm repository chartmuseum.jenkins-x.io.
