@@ -9,16 +9,16 @@ dependencies:
   version: 2.3.118
 - name: fmtok8s-agenda
   repository: http://jenkins-x-chartmuseum:8080
-  version: 0.0.2
+  version: 0.0.5
 - name: fmtok8s-api-gateway
   repository: http://jenkins-x-chartmuseum:8080
-  version: 0.0.12
+  version: 0.0.27
 - name: fmtok8s-c4p
   repository: http://jenkins-x-chartmuseum:8080
-  version: 0.0.12
+  version: 0.0.15
 - name: fmtok8s-email
   repository: http://jenkins-x-chartmuseum:8080
-  version: 0.0.1
+  version: 0.0.4
 - name: fmtok8s-monolith
   repository: http://jenkins-x-chartmuseum:8080
   version: 0.0.1
