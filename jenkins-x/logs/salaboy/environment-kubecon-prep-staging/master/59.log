@@ -1,0 +1,38 @@
+
+Showing logs for build [32mmeta-salaboy-environment-kubeco-glkrh-59[0m stage [32mmeta-pipeline[0m and container [32mstep-credential-initializer-gj9pj[0m
+{"level":"warn","ts":1583150969.0165982,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1583150969.0172093,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mmeta-salaboy-environment-kubeco-glkrh-59[0m stage [32mmeta-pipeline[0m and container [32mstep-working-dir-initializer-mm5lg[0m
+{"level":"warn","ts":1583150969.4310303,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1583150969.4390523,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mmeta-salaboy-environment-kubeco-glkrh-59[0m stage [32mmeta-pipeline[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mmeta-salaboy-environment-kubeco-glkrh-59[0m stage [32mmeta-pipeline[0m and container [32mstep-git-source-meta-salaboy-environment-kubeco-glkrh-l4gz7[0m
+{"level":"warn","ts":1583150975.5604908,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1583150976.6899848,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/*******/environment-kubecon-prep-staging.git @ d38a3f3ce672d968e452a0222a4db0e1844d5f77 in path /workspace/source"}
+
+Showing logs for build [32mmeta-salaboy-environment-kubeco-glkrh-59[0m stage [32mmeta-pipeline[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:d38a3f3ce672d968e452a0222a4db0e1844d5f77
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mmeta-salaboy-environment-kubeco-glkrh-59[0m stage [32mmeta-pipeline[0m and container [32mstep-merge-pull-refs[0m
+SKIP merge-pull-refs: Nothing to merge
+
+Showing logs for build [32mmeta-salaboy-environment-kubeco-glkrh-59[0m stage [32mmeta-pipeline[0m and container [32mstep-create-effective-pipeline[0m
+selected pack: /builder/home/.**/draft/packs/github.com/jenkins-x-buildpacks/jenkins-x-kubernetes/packs/environment
+Effective pipeline written to jenkins-x-promotion-effective.yml
+
+Showing logs for build [32mmeta-salaboy-environment-kubeco-glkrh-59[0m stage [32mmeta-pipeline[0m and container [32mstep-create-tekton-crds[0m
+running command: ** step next-version --use-git-tag-only --tag
+created new version: 0.0.57 and written to file: ./VERSION
+error: Have you set up a git credential helper? See https://help.github.com/articles/caching-your-github-password-in-git/
+: git output: To https://github.com/*******/environment-kubecon-prep-staging.git
+ ! [remote rejected] v0.0.57 -> v0.0.57 (cannot lock ref 'refs/tags/v0.0.57': reference already exists)
+error: failed to push some refs to 'https://github.com/*******/environment-kubecon-prep-staging.git': failed to run 'git push origin v0.0.57' command in directory '', output: 'To https://github.com/*******/environment-kubecon-prep-staging.git
+ ! [remote rejected] v0.0.57 -> v0.0.57 (cannot lock ref 'refs/tags/v0.0.57': reference already exists)
+error: failed to push some refs to 'https://github.com/*******/environment-kubecon-prep-staging.git''
+error: failed to set the version on release pipelines: failed to run '/bin/sh -c ** step next-version --use-git-tag-only --tag' command in directory '/workspace/source', output: ''
+[31m
+Pipeline failed on stage 'meta-pipeline' : container 'step-create-tekton-crds'. The execution of the pipeline has stopped.[0m
