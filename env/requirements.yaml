@@ -28,8 +28,8 @@ dependencies:
 - alias: operate
   name: zeebe-operate
   repository: http://helm.zeebe.io
-  version: 0.0.15
+  version: 0.0.12
 - alias: zeebe-operator
   name: zeebe-operator
   repository: http://helm.zeebe.io
-  version: 0.0.72
+  version: 0.0.63
