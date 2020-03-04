@@ -1,0 +1,42 @@
+
+Showing logs for build [32msalaboy-environment-kubecon-pre-qw7jq-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-k92nq[0m
+{"level":"warn","ts":1583322542.3135424,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1583322542.3195925,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32msalaboy-environment-kubecon-pre-qw7jq-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-x6q6b[0m
+{"level":"warn","ts":1583322543.114293,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1583322543.1176538,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32msalaboy-environment-kubecon-pre-qw7jq-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32msalaboy-environment-kubecon-pre-qw7jq-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-salaboy-environment-kubecon-pre-qw7jq-6xzwb[0m
+{"level":"warn","ts":1583322546.3562229,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1583322547.6272535,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/*******/environment-kubecon-prep-staging.git @ master in path /workspace/source"}
+
+Showing logs for build [32msalaboy-environment-kubecon-pre-qw7jq-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:457ba1ac0012a654493911852cc352b88c828b3f,67:fd43180f7a2453f42bde7efe657dd8f2511300b3
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git fetch origin --unshallow fd43180f7a2453f42bde7efe657dd8f2511300b3: 457ba1ac0012a654493911852cc352b88c828b3f:
+DEBUG: ran git fetch --unshallow origin fd43180f7a2453f42bde7efe657dd8f2511300b3: 457ba1ac0012a654493911852cc352b88c828b3f: in 
+DEBUG: JX_LOG_LEVEL=error LC_ALL=C git branch
+DEBUG: JX_LOG_LEVEL=error LC_ALL=C git checkout master
+DEBUG: ran git checkout master in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git reset --hard 457ba1ac0012a654493911852cc352b88c828b3f
+DEBUG: ran git reset --hard 457ba1ac0012a654493911852cc352b88c828b3f in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git clean -fd .
+DEBUG: ran clean --force -d . in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git merge fd43180f7a2453f42bde7efe657dd8f2511300b3
+DEBUG: ran git merge fd43180f7a2453f42bde7efe657dd8f2511300b3 in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git log --format=%H%x1f%an%x1f%ae%x1f%cn%x1f%ce%x1f%s%n%b%x1e 457ba1ac0012a654493911852cc352b88c828b3f..HEAD
+Merged SHA fd43180f7a2453f42bde7efe657dd8f2511300b3 with commit message 'chore: Promote fmtok8s-c4p to version 0.0.20' into base branch master
+
+Showing logs for build [32msalaboy-environment-kubecon-pre-qw7jq-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-helm-build[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io
+Successfully added Helm repository chartmuseum.jenkins-x.io.
+Adding missing Helm repo: helm.zeebe.io http://helm.zeebe.io
+Successfully added Helm repository helm.zeebe.io.
