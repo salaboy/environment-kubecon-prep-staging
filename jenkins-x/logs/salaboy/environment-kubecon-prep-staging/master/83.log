@@ -1,0 +1,46 @@
+
+Showing logs for build [32msalaboy-environment-kubecon-pre-pv8v8-83[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-m96vv[0m
+{"level":"warn","ts":1583321312.43695,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1583321312.4377837,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32msalaboy-environment-kubecon-pre-pv8v8-83[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-rpnqk[0m
+{"level":"warn","ts":1583321313.0162783,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1583321313.0181022,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32msalaboy-environment-kubecon-pre-pv8v8-83[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32msalaboy-environment-kubecon-pre-pv8v8-83[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-salaboy-environment-kubecon-pre-pv8v8-h249m[0m
+{"level":"warn","ts":1583321316.0867748,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1583321317.3416018,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/*******/environment-kubecon-prep-staging.git @ v0.0.77 in path /workspace/source"}
+
+Showing logs for build [32msalaboy-environment-kubecon-pre-pv8v8-83[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:457ba1ac0012a654493911852cc352b88c828b3f
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32msalaboy-environment-kubecon-pre-pv8v8-83[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /builder/home/git/credentials
+
+Showing logs for build [32msalaboy-environment-kubecon-pre-pv8v8-83[0m stage [32mfrom-build-pack[0m and container [32mstep-build-helm-apply[0m
+Modified file /workspace/source/env/Chart.yaml to set the chart to version 83
+Ignoring templates/.gitignore
+Ignoring templates/wildcardcert-secret.yaml
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io
+Successfully added Helm repository chartmuseum.jenkins-x.io.
+Adding missing Helm repo: helm.zeebe.io http://helm.zeebe.io
+Successfully added Helm repository helm.zeebe.io.
+
+configmap "config-artifact-bucket" deleted
+configmap "config-artifact-pvc" deleted
+configmap "config-defaults" deleted
+configmap "config-entrypoint" deleted
+configmap "config-logging" deleted
+serviceaccount "tekton-bot" deleted
+serviceaccount "tekton-pipelines" deleted
+role.rbac.authorization.k8s.io "tekton-bot" deleted
+rolebinding.rbac.authorization.k8s.io "tekton-bot" deleted
