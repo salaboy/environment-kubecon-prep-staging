@@ -25,3 +25,11 @@ dependencies:
 - name: fmtok8s-tests
   repository: http://jenkins-x-chartmuseum:8080
   version: 0.0.7
+- alias: operate
+  name: zeebe-operate
+  repository: http://helm.zeebe.io
+  version: 0.0.12
+- alias: zeebe-operator
+  name: zeebe-operator
+  repository: http://helm.zeebe.io
+  version: 0.0.63
