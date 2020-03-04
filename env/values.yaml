@@ -22,9 +22,5 @@ jenkins:
   Servers:
     Global: {}
 prow: {}
-zeebe-operator:
-  env:
-    PIPELINES_NAMESPACE: "jx"
-    PIPELINES_SA: "tekton-bot"
-  tekton:
-    enabled: false  
+global:
+  zeebe: jx-zeebe
